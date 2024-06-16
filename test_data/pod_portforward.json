@@ -1,46 +1,40 @@
 {
-  "uid": "1299d386-525b-4032-98ae-1949f69f9cfc",
+  "uid": "6f18ac5d-14d5-4c36-b21c-d9f497f88db6",
   "kind": {
     "group": "",
     "version": "v1",
-    "kind": "Pod"
+    "kind": "PodPortForwardOptions"
   },
   "resource": {
     "group": "",
     "version": "v1",
     "resource": "pods"
   },
+  "subResource": "portforward",
   "requestKind": {
     "group": "",
     "version": "v1",
-    "kind": "Pod"
+    "kind": "PodPortForwardOptions"
   },
   "requestResource": {
     "group": "",
     "version": "v1",
     "resource": "pods"
   },
+  "requestSubResource": "portforward",
   "name": "nginx",
   "namespace": "default",
-  "operation": "CREATE",
+  "operation": "CONNECT",
   "userInfo": {
-    "username": "kubernetes-admin",
     "groups": [
       "system:masters",
       "system:authenticated"
-    ]
+    ],
+    "username": "kubernetes-admin"
   },
   "object": {
-    "metadata": {
-      "name": "nginx"
-    },
-    "spec": {
-      "containers": [
-        {
-          "image": "nginx",
-          "name": "nginx"
-        }
-      ]
-    }
-  }
+    "kind": "PodPortForwardOptions",
+    "apiVersion": "v1"
+  },
+  "dryRun": false
 }
